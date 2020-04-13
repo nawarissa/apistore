@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
