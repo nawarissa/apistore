@@ -21,6 +21,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get("/meals", "MealController@index");
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
