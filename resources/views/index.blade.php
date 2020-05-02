@@ -254,11 +254,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="col-md-6 menugrid1 innergrid">
 											<h3>Sea food</h3>
 											<ul class="list ins1">
-												<li>prawns toast - <p>served with soup</p><span>$13.00</span></li>
-												<li>fish and chips - <p>Seasoned with sprinkling pepper</p><span>$16.09</span></li>
-												<li>boneless meat - <p>served with Onion sprinkled lemon</p><span>$11.69</span></li>
-												<li>Tasty rib meat - <p>Best quality product of herb</p><span>$12.00</span></li>
-												<li>congrio fish - <p>served with butter Cheese</p><span>$5.00</span></li>
+												@foreach ($meals as $meal)
+									        <x-meal :meal="$meal" />
+									      @endforeach
 											</ul>
 									</div>
 									<div class="clearfix"></div>
