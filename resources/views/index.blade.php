@@ -75,12 +75,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							@auth
 							Welcome: {{ Auth::user()->name }}
 							<h1>
-								<a class="link" href="{{ url('logout') }}">Logout</a>
+								<a class="link" href="{{ route('logout') }}"
+									 onclick="event.preventDefault();
+																 document.getElementById('logout-form').submit();">
+										{{ __('Logout') }}
+								</a>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+								</form>
 							</h1>
 							@endauth
 							@guest
 							<h1>
-								<a class="link" href="{{ url('login') }}">Login</a>
+								<a class="link" href="{{ route('login') }}">Login</a>
 							</h1>
 							@endguest
 						</div>
