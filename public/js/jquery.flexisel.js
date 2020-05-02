@@ -14,27 +14,27 @@
     $.fn.flexisel = function (options) {
 
         var defaults = $.extend({
-    		visibleItems: 1,
+    		visibleItems: 4,
     		animationSpeed: 200,
     		autoPlay: false,
     		autoPlaySpeed: 3000,    		
     		pauseOnHover: true,
 			setMaxWidthAndHeight: false,
     		enableResponsiveBreakpoints: false,
-    		// responsiveBreakpoints: { 
-	    	// 	portrait: { 
-	    	// 		changePoint:480,
-	    	// 		visibleItems: 1
-	    	// 	}, 
-	    	// 	landscape: { 
-	    	// 		changePoint:640,
-	    	// 		visibleItems: 2
-	    	// 	},
-	    	// 	tablet: { 
-	    	// 		changePoint:768,
-	    	// 		visibleItems: 3
-	    	// 	}
-        	// }
+    		responsiveBreakpoints: { 
+	    		portrait: { 
+	    			changePoint:480,
+	    			visibleItems: 1
+	    		}, 
+	    		landscape: { 
+	    			changePoint:640,
+	    			visibleItems: 2
+	    		},
+	    		tablet: { 
+	    			changePoint:768,
+	    			visibleItems: 3
+	    		}
+        	}
         }, options);
         
 		/******************************
@@ -120,7 +120,7 @@
 				
 				$(window).on("resize", function(event){
 					
-					// methods.setResponsiveEvents();
+					methods.setResponsiveEvents();
 					
 					var innerWidth = $(listParent).width();
 					var innerHeight = $(listParent).height(); 
@@ -170,24 +170,24 @@
 			Set Responsive Events
 			*******************************/			
 			
-			// setResponsiveEvents: function() {
-			// 	var contentWidth = $('html').width();
+			setResponsiveEvents: function() {
+				var contentWidth = $('html').width();
 				
-			// 	if(settings.enableResponsiveBreakpoints == true) {
-			// 		if(contentWidth < settings.responsiveBreakpoints.portrait.changePoint) {
-			// 			itemsVisible = settings.responsiveBreakpoints.portrait.visibleItems;
-			// 		}
-			// 		else if(contentWidth > settings.responsiveBreakpoints.portrait.changePoint && contentWidth < settings.responsiveBreakpoints.landscape.changePoint) {
-			// 			itemsVisible = settings.responsiveBreakpoints.landscape.visibleItems;
-			// 		}
-			// 		else if(contentWidth > settings.responsiveBreakpoints.landscape.changePoint && contentWidth < settings.responsiveBreakpoints.tablet.changePoint) {
-			// 			itemsVisible = settings.responsiveBreakpoints.tablet.visibleItems;
-			// 		}
-			// 		else {
-			// 			itemsVisible = settings.visibleItems;
-			// 		}
-			// 	}
-			// },			
+				if(settings.enableResponsiveBreakpoints == true) {
+					if(contentWidth < settings.responsiveBreakpoints.portrait.changePoint) {
+						itemsVisible = settings.responsiveBreakpoints.portrait.visibleItems;
+					}
+					else if(contentWidth > settings.responsiveBreakpoints.portrait.changePoint && contentWidth < settings.responsiveBreakpoints.landscape.changePoint) {
+						itemsVisible = settings.responsiveBreakpoints.landscape.visibleItems;
+					}
+					else if(contentWidth > settings.responsiveBreakpoints.landscape.changePoint && contentWidth < settings.responsiveBreakpoints.tablet.changePoint) {
+						itemsVisible = settings.responsiveBreakpoints.tablet.visibleItems;
+					}
+					else {
+						itemsVisible = settings.visibleItems;
+					}
+				}
+			},			
 			
 			/******************************
 			Scroll Left
