@@ -254,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="col-md-6 menugrid1 innergrid">
 											<h3>Sea food</h3>
 											<ul class="list ins1">
-												@foreach ($meals as $meal)
+												@foreach ($sea_food_meals as $meal)
 									        <x-meal :meal="$meal" />
 									      @endforeach
 											</ul>
@@ -263,22 +263,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-md-6 innergrid">
 											<h3>Deserts</h3>
 											<ul class="list ins1">
-												<li>Chocolate Cake - <p>served with Creamy popins</p><span>$9.00</span></li>
-												<li>Classic delight - <p>soft better delighted coke</p><span>$14.69</span></li>
-												<li>Holiday special - <p>Splitting mix</p><span>$11.50</span></li>
-												<li>Mix fruit club - <p>served with soup</p><span>$10.00</span></li>
-												<li>Milk shake - <p>served with Ice cubes</p><span>$8.00</span></li>
+												@foreach ($desert_meals as $meal)
+									        <x-meal :meal="$meal" />
+									      @endforeach
 											</ul>
 										</div>
 										<div class="col-md-6 innergrid">
 												<h3>Salads</h3>
 											<ul class="list ins1">
-												<li>Fruit salad - <p>Served with mix fruits</p><span>$7.00</span></li>
-												<li>Honeymoon - <p>served with Icecream corner slide</p><span>$19.09</span></li>
-												<li>Choconuts - <p>served with melting candies</p><span>$11.69</span></li>
-												<li>Mixed fruit with almond - <p>served with Almond pieces</p><span>$13.00</span></li>
-												<li>cocoa salad - <p>served with nuts and cream</p><span>$16.50</span></li>
-
+												@foreach ($salad_meals as $meal)
+									        <x-meal :meal="$meal" />
+									      @endforeach
 											</ul>
 										</div>
 								<div class="clearfix"></div>
