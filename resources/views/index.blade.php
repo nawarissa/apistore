@@ -158,23 +158,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div id="small-dialog2" class="mfp-hide book-form">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h3>Book A Table Now</h3>
-					<form action="#" method="post">
-						<input type="text" name="Name" placeholder="Reservation Name" required=""/>
-						<input type="tel" name="number" placeholder="Mobile Number" required=""/>
-						<input type="email" name="Email" class="email" placeholder="Email" required=""/>
-						<div class="select-block1">
-							<select required="">
-								<option value="">Number Of Guests</option>
-								<option value="">1 Guest</option>
-								<option value="">2 Guests</option>
-								<option value="">3 Guests</option>
-								<option value="">4 Guests</option>
-								<option value="">5 Guests</option>
-								<option value="">More Than 5</option>
-							</select>
-						</div>
-						<input class="date" type="text" id="datepicker2"  name="datepicker2" placeholder="Date Of Arrival" title="Please enter your Arrival Date " required=""/>
-						<textarea name="Message" placeholder="Additional Information (Optional)" ></textarea>
+					<form action="{{ url('booking') }}" method="post">
+						{{ csrf_field() }}
+						<input type="text" name="name" placeholder="Reservation Name" required=""/>
+						<input type="tel" name="mobile" placeholder="Mobile Number" required=""/>
+						<input type="email" name="email" class="email" placeholder="Email"/>
+						<input type="number" name="number" placeholder="Number of guests" required=""/>
+						<input type="datetime-local" name="arrival" placeholder="Date Of Arrival" title="Please enter your Arrival Date " required=""/>
+						<textarea name="additional_information" placeholder="Additional Information (Optional)" ></textarea>
 						<input type="submit" value="Book table">
 					</form>
 			</div>
