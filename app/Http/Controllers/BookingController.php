@@ -24,6 +24,6 @@ class BookingController extends Controller
       $input["user_id"] = Auth::id();
       $book = Booking::create($input);
 
-      return redirect()->route("home");
+      return redirect()->route("index")->with('success', 'Booking created successfully');
     }
 }

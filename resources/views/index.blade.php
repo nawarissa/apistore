@@ -48,7 +48,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 <!--//web font-->
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 <!-- scrolling script -->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -64,7 +65,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Body -->
 <body>
-
 <!-- banner -->
 	<div class="banner jarallax">
 		<div class="agileinfo-dot">
@@ -160,11 +160,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h3>Book A Table Now</h3>
 					<form action="{{ url('booking') }}" method="post">
 						{{ csrf_field() }}
-						<input type="text" name="name" placeholder="Reservation Name" required=""/>
-						<input type="tel" name="mobile" placeholder="Mobile Number" required=""/>
+						<input type="text" name="name" placeholder="Reservation Name" required/>
+						<input type="tel" name="mobile" placeholder="Mobile Number" required/>
 						<input type="email" name="email" class="email" placeholder="Email"/>
-						<input type="number" name="number" placeholder="Number of guests" required=""/>
-						<input type="datetime-local" name="arrival" placeholder="Date Of Arrival" title="Please enter your Arrival Date " required=""/>
+						<input type="number" name="number" placeholder="Number of guests" required/>
+						<input type="text" id="arrival" name="arrival" placeholder="Date Of Arrival" title="Please enter your Arrival Date " required/>
 						<textarea name="additional_information" placeholder="Additional Information (Optional)" ></textarea>
 						<input type="submit" value="Book table">
 					</form>
@@ -811,7 +811,6 @@ fit: true
 	</script>
 <!-- //here ends scrolling icon -->
 
-
 <!-- Date-Picker-JavaScript -->
 				<script src="js/jquery-ui.js"></script>
 				<script>
@@ -825,7 +824,20 @@ fit: true
 		<script src="js/modernizr.custom.72111.js"></script>
 <!-- banner text effect js file -->
 
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+<script type="text/javascript">
+	flatpickr("#arrival", {
+		"enableTime": true
+	});
+	@if(Session::has('success'))
+		toastr.info("{{ Session::get('success') }}")
+    @php
+    	Session::forget('success');
+    @endphp
+  @endif
+</script>
 
 </body>
 <!-- //Body -->
