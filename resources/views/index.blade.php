@@ -165,6 +165,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<input type="email" name="email" class="email" placeholder="Email"/>
 						<input type="number" name="number" placeholder="Number of guests" required/>
 						<input type="text" id="arrival" name="arrival" placeholder="Date Of Arrival" title="Please enter your Arrival Date " required/>
+						<select name="rest_table_id">
+							@foreach ($tables as $table)
+								<option selected value="{{ $table->id }}">{{ $table->name }}-{{ $table->position->name }}</option>
+							@endforeach
+						</select>
 						<textarea name="additional_information" placeholder="Additional Information (Optional)" ></textarea>
 						<input type="submit" value="Book table">
 					</form>

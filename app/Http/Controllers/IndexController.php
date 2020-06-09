@@ -7,6 +7,8 @@ use App\Meal;
 use App\Type;
 use Illuminate\Support\Facades\DB;
 
+use App\RestTable;
+
 class IndexController extends Controller
 {
     public function index() {
@@ -18,8 +20,15 @@ class IndexController extends Controller
 
       $desert_type_id = Type::where("name", "desert")->first();
       $desert_meals = DB::table('meals')->where('type_id', $desert_type_id->id)->take(10)->get();;
+      $tables = RestTable::all();
       return view("index", ["sea_food_meals" => $sea_food_meals,
                             "salad_meals" => $salad_meals,
-                            "desert_meals" => $desert_meals]);
+                            "desert_meals" => $desert_meals,
+                            "tables" => $tables]);
+    }
+
+    public function test() {
+      $tables = RestTable::take(10)->get();
+      return view("test", ["tables" => $tables]);
     }
 }

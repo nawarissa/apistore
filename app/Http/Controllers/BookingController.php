@@ -22,7 +22,9 @@ class BookingController extends Controller
       ]);
       $input = $request->all();
       $input["user_id"] = Auth::id();
-      $book = Booking::create($input);
+      $booking = new Booking($input);
+      $booking->rest_table_id = (int)$input["rest_table_id"];
+      $booking->save();
 
       return redirect()->route("index")->with('success', 'Booking created successfully');
     }
