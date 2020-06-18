@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route::group(['middleware' => 'auth:web'], function() {
 Route::get('/', "IndexController@index")->name("index");
+//});
 
 Route::get('/about', function () {
     return view('about');
@@ -26,7 +27,10 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Auth::routes();
+//Auth::routes();
+
+Route::get('/login', 'UserController@login')->name("login");
+Route::get('/register', 'UserController@register')->name("register");
 
 Route::get('/home', 'HomeController@index')->name('home');
 
