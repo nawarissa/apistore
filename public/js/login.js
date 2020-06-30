@@ -1,9 +1,3 @@
-var app = new Vue({
-  el: "#formContent",
-  data: {
-    error: ''
-  }
-})
 function login_action(event) {
   event.preventDefault();
   let login_field = $("#login")
@@ -28,10 +22,20 @@ function login_action(event) {
   }).then(function (response) {
     token = response.data["success"]["token"];
     localStorage.setItem("token", token);
-    app.error = ''
+    //app.error = ''
     location = "/"
   }).catch(function(error) {
-    app.error = error.response.data["error"]
+    //app.error = error.response.data["error"]
     toastr.error("Error logging in")
   })
+}
+
+function needs_login(handler) {
+  var token = localStorage.getItem("token");
+  if (token === 'undefined' || token === null) {
+    $("#login_modal").show();
+  }
+  else {
+    handler(token);
+  }
 }

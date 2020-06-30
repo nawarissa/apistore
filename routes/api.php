@@ -28,4 +28,5 @@ Route::group(['middleware' => 'auth:api'], function() {
   Route::get('booking', function(Request $request) {
     return response()->json(["data" => Booking::all()]);
   });
+  Route::post('booking', 'API\BookingController@book')->name("api-book");
 });
