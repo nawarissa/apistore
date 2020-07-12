@@ -10,40 +10,46 @@ function needs_login(handler) {
   }
 }
 
+
 Vue.component('rest-table', {
   props: ['name', 'position', 'count', 'imgUrl', "booking_count"],
   template: '<div class="rest-table"><img onclick="show_booking_modal(event)" width="230" height="200" :src="imgUrl" :alt="name" /><h2>{{ name }}</h2><p>{{ position }} - {{ count }}</p><p>Number of bookings: {{ booking_count }}</p></div>'
 })
-
-var vm = new Vue({
-  el: "#app",
-  data: {
-    page: "booking",
-    tables: [],
-    table: "",
-    dates: []
-  },
-  computed: {
-    groupedTables() {
-      return _.chunk(this.tables, 3);
+$(document).ready(function() {
+  vm = new Vue({
+    el: "#app",
+    data: {
+      page: "main",
+      tables: [],
+      table: "",
+      dates: []
+    },
+    computed: {
+      groupedTables() {
+        return _.chunk(this.tables, 3);
+      }
     }
-  }
-})
+  });
+});
 
-axios({
-  url: "/api/tables",
+function go_booking_page(event) {
+  vm.page = "booking";
 
-  method: "GET",
+  axios({
+    url: "/api/tables",
 
-  headers: {
-    "Accept": "application/json"
-  },
+    method: "GET",
 
-  responseType: 'json',
-}).then(function(response) {
-  vm.tables = response.data.tables;
+    headers: {
+      "Accept": "application/json"
+    },
 
-})
+    responseType: 'json',
+  }).then(function(response) {
+    vm.tables = response.data.tables;
+  })
+}
+
 
 function make_booking(event) {
   event.preventDefault();

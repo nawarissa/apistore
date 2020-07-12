@@ -1,8 +1,15 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
 <head>
 <title>Fresh Food a Hotel Category Bootstrap responsive Website Template | Home :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta name="keywords" content="Fresh Food a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -32,6 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //logo text effect css files -->
 
 <!-- default css files -->
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 <!-- default css files -->
@@ -40,26 +48,209 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 <!--//web font-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="css/login.css" />
+
 <!-- scrolling script -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
 <!-- //scrolling script -->
-<style>
-	.rest-table {
-		border-width: 2px;
-		border-style: solid;
-		margin: 10px;
-	}
-</style>
 
 </head>
 
 <!-- Body -->
 <body>
-	<div id="app" class="container">
-		<div class="modal" tabindex="-1" role="dialog" id="login_modal">
+
+<!-- banner -->
+	<div class="banner jarallax">
+		<div class="agileinfo-dot">
+			<div class="header">
+				<div class="container-fluid">
+					<div class="header-left">
+						<div class="w3layouts-logo grid__item">
+							<h1>
+								<a class="link link--ilin" href="#"><span>Fresh</span><span>Food</span></a>
+							</h1>
+						</div>
+					</div>
+					<div class="top-nav">
+						<nav class="navbar navbar-default">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a class="active" href="index.html">Home</a></li>
+									<li><a href="#about" class="scroll">About</a></li>
+									<li><a href="#services" class="scroll">Services</a></li>
+									<li><a href="#chefs" class="scroll">Chefs</a></li>
+									<li><a href="#gallery" class="scroll">Gallery</a></li>
+									<li><a href="#customer" class="scroll">Customers</a></li>
+									<li><a href="#contact" class="scroll">Contact</a></li>
+								</ul>
+
+					<div class="clearfix"> </div>
+							</div>
+						</nav>
+						<div class="agileinfo-social-grids">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								<li><a href="#"><i class="fa fa-vk"></i></a></li>
+							</ul>
+						</div>
+
+				</div>
+					</div>
+
+			</div>
+			<div class="agileits-banner-info">
+				<h3>welcome to</h3>
+					<h2 class="rw-sentence">
+					<span>Food tastes better, eat with your </span>
+					<div class="rw-words rw-words-1">
+						<span>Family</span>
+						<span>Friends</span>
+						<span>happiness</span>
+						<span>Love</span>
+						<span>Gratefulness</span>
+						<span>happiness</span>
+					</div>
+					</h2>
+					<button class="btn btn-primary" onclick="go_booking_page(event)">Book Your Table</button>
+			</div>
+		</div>
+	</div>
+<!-- //banner -->
+
+<!-- tabs  js-->
+<script src="js/easy-responsive-tabs.js"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+
+<!-- //tabs-js  -->
+
+<!-- gallery js -->
+	<script src="js/lsb.min.js"></script>
+	<script>
+	$(window).load(function() {
+			$.fn.lightspeedBox();
+		});
+	</script>
+<!-- //gallery js -->
+
+<script type="text/javascript">
+			$(window).load(function() {
+				$("#flexiselDemo1").flexisel({
+					visibleItems: 3,
+					animationSpeed: 1000,
+					autoPlay: true,
+					autoPlaySpeed: 3000,
+					pauseOnHover: true,
+					enableResponsiveBreakpoints: true,
+					responsiveBreakpoints: {
+						portrait: {
+							changePoint:480,
+							visibleItems: 1
+						},
+						landscape: {
+							changePoint:640,
+							visibleItems:3
+						},
+						tablet: {
+							changePoint:768,
+							visibleItems: 3
+						}
+					}
+				});
+
+			});
+	</script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+	<script src="js/jarallax.js"></script>
+		<script src="js/SmoothScroll.min.js"></script>
+		<script type="text/javascript">
+			/* init Jarallax */
+			$('.jarallax').jarallax({
+				speed: 0.5,
+				imgWidth: 1366,
+				imgHeight: 768
+			})
+		</script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<!-- here stars scrolling icon -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+					var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear'
+					};
+				*/
+
+				$().UItoTop({ easingType: 'easeOutQuart' });
+
+				});
+		</script>
+	<!-- //here ends scrolling icon -->
+
+
+	<!-- Date-Picker-JavaScript -->
+					<script src="js/jquery-ui.js"></script>
+					<script>
+						$(function() {
+							$( "#datepicker,#datepicker1,#datepicker2" ).datepicker();
+						});
+					</script>
+	<!-- //Date-Picker-JavaScript -->
+
+	<!-- banner text effect js file -->
+			<script src="js/modernizr.custom.72111.js"></script>
+	<!-- banner text effect js file -->
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/js/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/vm.js"></script>
+
+<div id="app">
+	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
       <div class="wrapper fadeInDown">
         <div id="formContent">
 
@@ -79,16 +270,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div v-if="page=='booking'">
 			@include('booking')
 		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="/js/lodash.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-	<script src="/js/login.js"></script>
-	<script src="/js/vm.js"></script>
+		<!-- copyright -->
+		<div class="copyright-agile">
+			<p>&copy; 2017 Fresh Food. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+		</div>
+		<!-- //copyright -->
+</div>
+
 </body>
 <!-- //Body -->
 </html>
