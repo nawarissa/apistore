@@ -2,7 +2,6 @@
 function needs_login(handler) {
   var token = localStorage.getItem("token");
   if (token === 'undefined' || token === null) {
-    alert("show login modal");
     $("#login_modal").show();
   }
   else {
@@ -10,11 +9,13 @@ function needs_login(handler) {
   }
 }
 
+var vm = "";
 
 Vue.component('rest-table', {
   props: ['name', 'position', 'count', 'imgUrl', "booking_count"],
-  template: '<div class="rest-table"><img onclick="show_booking_modal(event)" width="230" height="200" :src="imgUrl" :alt="name" /><h2>{{ name }}</h2><p>{{ position }} - {{ count }}</p><p>Number of bookings: {{ booking_count }}</p></div>'
+  template: '<div class="rest-table"><img class="rest-image" onclick="show_booking_modal(event)" width="230" height="200" :src="imgUrl" :alt="name" /><h2>{{ name }}</h2><p>{{ position }} - {{ count }}</p><p>Number of bookings: {{ booking_count }}</p></div>'
 })
+
 $(document).ready(function() {
   vm = new Vue({
     el: "#app",
@@ -30,9 +31,12 @@ $(document).ready(function() {
       }
     }
   });
+  if (window.location.pathname == "/booking") {
+    go_booking_page();
+  }
 });
 
-function go_booking_page(event) {
+function go_booking_page() {
   vm.page = "booking";
 
   axios({
@@ -101,7 +105,6 @@ function show_booking_modal(event) {
     "enableTime": true
   });
   needs_login(function(token) {
-    alert("show booking modal");
     vm.dates = []
     $("#booking_modal").show();
   });

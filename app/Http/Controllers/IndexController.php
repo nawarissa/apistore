@@ -26,6 +26,9 @@ class IndexController extends Controller
                             "desert_meals" => $desert_meals,
                             "tables" => $tables]);
     }
+    public function book() {
+      return view("booking");
+    }
 
     public function test() {
       $tables = RestTable::take(10)->get();

@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span>happiness</span>
 					</div>
 					</h2>
-					<button class="btn btn-primary" onclick="go_booking_page(event)">Book Your Table</button>
+					<a href="{{ route('book') }}">Book Your Table</a>
 			</div>
 		</div>
 	</div>
@@ -264,12 +264,7 @@ fit: true
         </div>
       </div>
     </div>
-		<div v-if="page=='main'">
 			@include ('main')
-		</div>
-		<div v-if="page=='booking'">
-			@include('booking')
-		</div>
 		<!-- copyright -->
 		<div class="copyright-agile">
 			<p>&copy; 2017 Fresh Food. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
