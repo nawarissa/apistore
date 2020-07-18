@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\NewBooking;
+use Illuminate\Support\Facades\Mail;
 
 use App\RestTable;
 use App\Position;
@@ -29,9 +31,9 @@ class BookingController extends Controller
       $user = Auth::user();
       $input = $request->all();
       $input["user_id"] = Auth::id();
-      lad($input["arrival"]);
       $dt = Carbon::parse($input["arrival"]);
       $input["arrival"] = $dt;
+      $input["email"] = $user->email;
       $table = RestTable::where("name", $input["table"])->first();
       $response = array();
       if ($table) {
@@ -40,17 +42,25 @@ class BookingController extends Controller
         if ($input["available"]) {
           $booking = new Booking($input);
           $booking->save();
-          $response["msg"] = "ok";
+          $new_booking = new NewBooking($user->name, $booking->arrival, $table->name, $booking->number);
+          Mail::to($user->email)->send($new_booking);
+          $response["msg"] = "table Booked";
         }
         else {
-          $response["msg"] = "no";
+          $response["msg"] = "Table not booked";
           $dates = $table->suggestDates($dt);
           $response["suggested_dates"] = $dates;
           return response()->json(["dates" => $dates ], 422);
         }
       }
       else {
-        $input["table"] = "Not Found";
+        $response["msg"] = "No table with name " . $input["table"];
+        $tables = array();
+        $tabless = RestTable::all();
+        foreach ($tabless as $table) {
+          array_push($tables, $table->name);
+        }
+        $response["tables"] = $tables;
       }
 
       return $response;

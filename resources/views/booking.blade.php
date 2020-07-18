@@ -42,6 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <!-- default css files -->
 
 <!--web font-->
@@ -290,8 +291,8 @@ fit: true
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title">New Booking</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#booking_modal').hide()">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -303,13 +304,8 @@ fit: true
                   <small id="mobileHelp" class="form-text text-muted">We'll never share your mobile with anyone else.</small>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-                  <small id="emailHelp" class="form-text text-muted">Providng an email is optional</small>
-                </div>
-                <div class="form-group">
                   <label for="number">Number of guests</label>
-                  <input type="number" class="form-control" id="number" placeholder="Number of guests">
+                  <input type="number" :max="max_count" class="form-control" id="number" placeholder="Number of guests">
                 </div>
                 <div class="form-group" v-if="dates.length==0">
                   <label for="arrival">Date of arrival</label>

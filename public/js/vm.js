@@ -23,7 +23,9 @@ $(document).ready(function() {
       page: "main",
       tables: [],
       table: "",
-      dates: []
+      dates: [],
+      min_count: 1,
+      max_count: 25
     },
     computed: {
       groupedTables() {
@@ -64,7 +66,6 @@ function make_booking(event) {
   var arrival = $("#arrival").val()
   var d = new Date(arrival);
   arrival = d.toLocaleString();
-  console.log(arrival);
   var number = $("#number").val()
   axios({
     method: "POST",
@@ -101,6 +102,12 @@ function make_booking(event) {
 function show_booking_modal(event) {
   event.preventDefault();
   vm.table = event.currentTarget.getAttribute("alt");
+  for (var table in vm.tables) {
+    if (vm.tables[table].name == vm.table) {
+      vm.max_count = vm.tables[table].count;
+      break
+    }
+  }
   flatpickr("#arrival", {
     "enableTime": true
   });
