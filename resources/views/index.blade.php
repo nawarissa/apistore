@@ -242,12 +242,9 @@ fit: true
 			<script src="js/modernizr.custom.72111.js"></script>
 	<!-- banner text effect js file -->
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="/js/lodash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/axios.min.js"></script>
 <script src="/js/login.js"></script>
-<script src="/js/vm.js"></script>
 
 <div id="app">
 	<div class="modal" tabindex="-1" role="dialog" id="login_modal">

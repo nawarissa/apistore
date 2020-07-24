@@ -2,6 +2,7 @@
 function needs_login(handler) {
   var token = localStorage.getItem("token");
   if (token === 'undefined' || token === null) {
+    toastr.warning("Please login first")
     $("#login_modal").show();
   }
   else {
@@ -67,36 +68,47 @@ function make_booking(event) {
   var d = new Date(arrival);
   arrival = d.toLocaleString();
   var number = $("#number").val()
-  axios({
-    method: "POST",
-    url: "/api/booking",
-    headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${localStorage.getItem("token")}`
-    },
-    data: {
-      table: table,
-      mobile: mobile,
-      name: name,
-      email: email,
-      number: number,
-      arrival: arrival
-    },
-    responseType: 'json'
-  }).then(function (response) {
-    alert(response.data.msg)
-    vm.dates = []
-  }).catch(function (error) {
-    if (error.response.status == 422) {
-      alert(`You can try these available dates ${error.response.data.dates}`)
-      vm.dates = error.response.data.dates
-    }else if (error.response.status == 500) {
-      alert("Internal error please try again later")
+  if (number > vm.max_count) {
+    toastr.error("Cannot book this number of guests on this table");
+  }
+  else {
+    axios({
+      method: "POST",
+      url: "/api/booking",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${localStorage.getItem("token")}`
+      },
+      data: {
+        table: table,
+        mobile: mobile,
+        name: name,
+        email: email,
+        number: number,
+        arrival: arrival
+      },
+      responseType: 'json'
+    }).then(function (response) {
+      toastr.info("Booking was successful")
       vm.dates = []
-    }
+    }).catch(function (error) {
+      if (error.response) {
+        if (error.response.status == 422) {
+          toastr.error(`Please select one of available dates`)
+          vm.dates = error.response.data.dates
+        }else if (error.response.status == 500) {
+          toastr.error("Internal error please try again later")
+          vm.dates = []
+        }
+      }
+      else {
+        toastr.error("Unknown error, please try again")
+      }
 
-  })
+
+    })
+  }
 }
 
 function show_booking_modal(event) {
@@ -108,8 +120,12 @@ function show_booking_modal(event) {
       break
     }
   }
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
   flatpickr("#arrival", {
-    "enableTime": true
+    enableTime: true,
+    minDate: tomorrow
+
   });
   needs_login(function(token) {
     vm.dates = []

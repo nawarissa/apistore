@@ -22,8 +22,6 @@ function login_action(event) {
   }).then(function (response) {
     token = response.data["success"]["token"];
     localStorage.setItem("token", token);
-    //app.error = ''
-    location = "/"
   }).catch(function(error) {
     //app.error = error.response.data["error"]
     toastr.error("Error logging in")

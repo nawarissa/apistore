@@ -42,7 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+	<link rel="stylesheet" href="css/toastr.min.css">
 <!-- default css files -->
 
 <!--web font-->
@@ -260,17 +261,43 @@ fit: true
 			<script src="js/modernizr.custom.72111.js"></script>
 	<!-- banner text effect js file -->
 
-<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
 <script src="/js/vue.js"></script>
 <script src="/js/lodash.min.js"></script>
 <script src="/js/flatpickr.js"></script>
 <script src="/js/axios.min.js"></script>
 <script src="/js/login.js"></script>
+<script src="js/toastr.min.js"></script>
 <script src="/js/vm.js"></script>
 
 <div id="app">
+	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#booking_modal').hide()">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label required for="login">Email</label>
+							<input type="text" id="login" class="form-control" name="login" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label required for="password">Email</label>
+							<input type="password" id="password" class="form-control" name="password" placeholder="Password">
+						</div>
+            <input type="submit" class="btn btn-primary" value="Log In" onclick="login_action(event)">
+          </form>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#login_modal').hide()">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
       <div class="wrapper fadeInDown">
         <div id="formContent">
@@ -299,17 +326,17 @@ fit: true
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="mobile">Mobile</label>
+                  <label required for="mobile">Mobile</label>
                   <input type="tel" class="form-control" id="mobile" aria-describedby="mobileHelp" placeholder="Enter Mobile Number">
                   <small id="mobileHelp" class="form-text text-muted">We'll never share your mobile with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label for="number">Number of guests</label>
-                  <input type="number" :max="max_count" class="form-control" id="number" placeholder="Number of guests">
+                  <input required type="number" class="form-control" id="number" placeholder="Number of guests">
                 </div>
                 <div class="form-group" v-if="dates.length==0">
                   <label for="arrival">Date of arrival</label>
-                  <input type="text" class="form-control" id="arrival" placeholder="Date of arrival">
+                  <input required type="text" class="form-control" id="arrival" placeholder="Date of arrival">
                 </div>
                 <div class="form-group" v-else>
                   <label for="arrival">Date of arrival</label>
