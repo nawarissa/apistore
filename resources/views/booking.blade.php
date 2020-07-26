@@ -270,26 +270,39 @@ fit: true
 <script src="/js/vm.js"></script>
 
 <div id="app">
+	@verbatim
 	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Login</h5>
+					<h5 v-if="login==true" class="modal-title">Login</h5>
+					<h5 v-if="login==false" class="modal-title">Register</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#booking_modal').hide()">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<form>
+						<div v-if="login==false" class="form-group">
+							<label required for="name">Name</label>
+							<input type="text" id="name" class="form-control" name="name" placeholder="Name">
+						</div>
 						<div class="form-group">
 							<label required for="login">Email</label>
 							<input type="text" id="login" class="form-control" name="login" placeholder="Email">
 						</div>
 						<div class="form-group">
-							<label required for="password">Email</label>
+							<label required for="password">Password</label>
 							<input type="password" id="password" class="form-control" name="password" placeholder="Password">
 						</div>
-            <input type="submit" class="btn btn-primary" value="Log In" onclick="login_action(event)">
+						<div v-if="login==false" class="form-group">
+							<label required for="c_password">Confirm Password</label>
+							<input type="password" id="c_password" class="form-control" name="c_password" placeholder="Confirm Password">
+						</div>
+            <input v-if="login==true" type="submit" class="btn btn-primary" value="Log In" onclick="login_action(event)">
+						<input v-if="login==false" type="submit" class="btn btn-primary" value="Log In" onclick="show_login(event)">
+						<input v-if="login==true" type="submit" class="btn btn-primary" value="Register" onclick="show_register(event)">
+						<input v-if="login==false" type="submit" class="btn btn-primary" value="Register" onclick="register_action(event)">
           </form>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#login_modal').hide()">Close</button>
@@ -298,21 +311,6 @@ fit: true
 			</div>
 		</div>
 	</div>
-	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
-      <div class="wrapper fadeInDown">
-        <div id="formContent">
-
-          <!-- Login Form -->
-          <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" value="">
-            <input type="submit" class="fadeIn fourth" value="Log In" onclick="login_action(event)">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    @verbatim
     <div class="booking">
       <div class="modal" tabindex="-1" role="dialog" id="booking_modal">
         <div class="modal-dialog" role="document">

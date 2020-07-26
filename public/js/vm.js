@@ -26,7 +26,8 @@ $(document).ready(function() {
       table: "",
       dates: [],
       min_count: 1,
-      max_count: 25
+      max_count: 25,
+      login: true
     },
     computed: {
       groupedTables() {
@@ -92,6 +93,12 @@ function make_booking(event) {
     }).then(function (response) {
       toastr.info("Booking was successful")
       vm.dates = []
+      var tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      flatpickr("#arrival", {
+        enableTime: true,
+        minDate: tomorrow
+      });
     }).catch(function (error) {
       if (error.response) {
         if (error.response.status == 422) {
@@ -125,7 +132,6 @@ function show_booking_modal(event) {
   flatpickr("#arrival", {
     enableTime: true,
     minDate: tomorrow
-
   });
   needs_login(function(token) {
     vm.dates = []
