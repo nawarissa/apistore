@@ -84,8 +84,124 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Body -->
 <body>
+	<!-- tabs  js-->
+	<script src="js/easy-responsive-tabs.js"></script>
+	<script>
+	$(document).ready(function () {
+	$('#horizontalTab').easyResponsiveTabs({
+	type: 'default', //Types: default, vertical, accordion
+	width: 'auto', //auto or any width like 600px
+	fit: true,   // 100% fit in a container
+	closed: 'accordion', // Start closed if in accordion view
+	activate: function(event) { // Callback function if tab is switched
+	var $tab = $(this);
+	var $info = $('#tabInfo');
+	var $name = $('span', $info);
+	$name.text($tab.text());
+	$info.show();
+	}
+	});
+	$('#verticalTab').easyResponsiveTabs({
+	type: 'vertical',
+	width: 'auto',
+	fit: true
+	});
+	});
+	</script>
 
+	<!-- //tabs-js  -->
+
+	<!-- gallery js -->
+		<script src="js/lsb.min.js"></script>
+		<script>
+		$(window).load(function() {
+				$.fn.lightspeedBox();
+			});
+		</script>
+	<!-- //gallery js -->
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$("#flexiselDemo1").flexisel({
+						visibleItems: 3,
+						animationSpeed: 1000,
+						autoPlay: true,
+						autoPlaySpeed: 3000,
+						pauseOnHover: true,
+						enableResponsiveBreakpoints: true,
+						responsiveBreakpoints: {
+							portrait: {
+								changePoint:480,
+								visibleItems: 1
+							},
+							landscape: {
+								changePoint:640,
+								visibleItems:3
+							},
+							tablet: {
+								changePoint:768,
+								visibleItems: 3
+							}
+						}
+					});
+
+				});
+		</script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		<script src="js/jarallax.js"></script>
+			<script src="js/SmoothScroll.min.js"></script>
+			<script type="text/javascript">
+				/* init Jarallax */
+				$('.jarallax').jarallax({
+					speed: 0.5,
+					imgWidth: 1366,
+					imgHeight: 768
+				})
+			</script>
+			<script type="text/javascript" src="js/move-top.js"></script>
+			<script type="text/javascript" src="js/easing.js"></script>
+			<!-- here stars scrolling icon -->
+			<script type="text/javascript">
+				$(document).ready(function() {
+					/*
+						var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear'
+						};
+					*/
+
+					$().UItoTop({ easingType: 'easeOutQuart' });
+
+					});
+			</script>
+		<!-- //here ends scrolling icon -->
+
+
+		<!-- Date-Picker-JavaScript -->
+						<script src="js/jquery-ui.js"></script>
+						<script>
+							$(function() {
+								$( "#datepicker,#datepicker1,#datepicker2" ).datepicker();
+							});
+						</script>
+		<!-- //Date-Picker-JavaScript -->
+
+		<!-- banner text effect js file -->
+				<script src="js/modernizr.custom.72111.js"></script>
+		<!-- banner text effect js file -->
+
+	<script src="/js/vue.js"></script>
+	<script src="/js/lodash.min.js"></script>
+	<script src="/js/flatpickr.js"></script>
+	<script src="/js/axios.min.js"></script>
+	<script src="/js/login.js"></script>
+	<script src="js/toastr.min.js"></script>
+	<script src="/js/vm.js"></script>
 <!-- banner -->
+<div id="app">
+	@verbatim
 	<div class="banner jarallax">
 		<div class="agileinfo-dot">
 			<div class="header">
@@ -93,7 +209,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="header-left">
 						<div class="w3layouts-logo grid__item">
 							<h1>
-								<a class="link link--ilin" href="{{ route('index') }}"><span>Fresh</span><span>Food</span></a>
+								<a class="link link--ilin" href="/"><span>Fresh</span><span>Food</span></a>
 							</h1>
 						</div>
 					</div>
@@ -123,12 +239,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</nav>
 						<div class="agileinfo-social-grids">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-								<li><a href="#"><i class="fa fa-vk"></i></a></li>
-							</ul>
+							<button v-if="login==false" class="btn btn-primary" type="button" name="button">Login</button>
+							<div v-if="login==true">
+								<button class="btn btn-primary" type="button" name="button" onclick="logout()">Logout</button>
+							</div>
 						</div>
 
 				</div>
@@ -153,124 +267,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!-- //banner -->
 
-<!-- tabs  js-->
-<script src="js/easy-responsive-tabs.js"></script>
-<script>
-$(document).ready(function () {
-$('#horizontalTab').easyResponsiveTabs({
-type: 'default', //Types: default, vertical, accordion
-width: 'auto', //auto or any width like 600px
-fit: true,   // 100% fit in a container
-closed: 'accordion', // Start closed if in accordion view
-activate: function(event) { // Callback function if tab is switched
-var $tab = $(this);
-var $info = $('#tabInfo');
-var $name = $('span', $info);
-$name.text($tab.text());
-$info.show();
-}
-});
-$('#verticalTab').easyResponsiveTabs({
-type: 'vertical',
-width: 'auto',
-fit: true
-});
-});
-</script>
-
-<!-- //tabs-js  -->
-
-<!-- gallery js -->
-	<script src="js/lsb.min.js"></script>
-	<script>
-	$(window).load(function() {
-			$.fn.lightspeedBox();
-		});
-	</script>
-<!-- //gallery js -->
-
-<script type="text/javascript">
-			$(window).load(function() {
-				$("#flexiselDemo1").flexisel({
-					visibleItems: 3,
-					animationSpeed: 1000,
-					autoPlay: true,
-					autoPlaySpeed: 3000,
-					pauseOnHover: true,
-					enableResponsiveBreakpoints: true,
-					responsiveBreakpoints: {
-						portrait: {
-							changePoint:480,
-							visibleItems: 1
-						},
-						landscape: {
-							changePoint:640,
-							visibleItems:3
-						},
-						tablet: {
-							changePoint:768,
-							visibleItems: 3
-						}
-					}
-				});
-
-			});
-	</script>
-	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-	<script src="js/jarallax.js"></script>
-		<script src="js/SmoothScroll.min.js"></script>
-		<script type="text/javascript">
-			/* init Jarallax */
-			$('.jarallax').jarallax({
-				speed: 0.5,
-				imgWidth: 1366,
-				imgHeight: 768
-			})
-		</script>
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<!-- here stars scrolling icon -->
-		<script type="text/javascript">
-			$(document).ready(function() {
-				/*
-					var defaults = {
-					containerID: 'toTop', // fading element id
-					containerHoverID: 'toTopHover', // fading element hover id
-					scrollSpeed: 1200,
-					easingType: 'linear'
-					};
-				*/
-
-				$().UItoTop({ easingType: 'easeOutQuart' });
-
-				});
-		</script>
-	<!-- //here ends scrolling icon -->
 
 
-	<!-- Date-Picker-JavaScript -->
-					<script src="js/jquery-ui.js"></script>
-					<script>
-						$(function() {
-							$( "#datepicker,#datepicker1,#datepicker2" ).datepicker();
-						});
-					</script>
-	<!-- //Date-Picker-JavaScript -->
-
-	<!-- banner text effect js file -->
-			<script src="js/modernizr.custom.72111.js"></script>
-	<!-- banner text effect js file -->
-
-<script src="/js/vue.js"></script>
-<script src="/js/lodash.min.js"></script>
-<script src="/js/flatpickr.js"></script>
-<script src="/js/axios.min.js"></script>
-<script src="/js/login.js"></script>
-<script src="js/toastr.min.js"></script>
-<script src="/js/vm.js"></script>
-
-<div id="app">
-	@verbatim
 	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">

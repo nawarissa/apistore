@@ -40,6 +40,27 @@ $(document).ready(function() {
   }
 });
 
+function do_logout(token) {
+  axios(
+    {
+      method: "POST",
+      url: "/api/logout",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+    }
+  ).then(function(response) {
+    vm.login = false
+    localStorage.removeItem("token")
+  })
+}
+
+function logout() {
+  needs_login(do_logout);
+}
+
 function go_booking_page() {
   vm.page = "booking";
 
