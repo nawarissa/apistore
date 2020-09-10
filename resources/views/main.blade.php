@@ -505,13 +505,7 @@
 			<p>Sed iaculis, nisl a eleifend porttitor, diam mauris gravida arcu, suscipit ullamcorper nulla diam vitae lorem..</p>
 		</div>
 		<div class="col-md-6 footer-right">
-			<section class="subscribe" id="subscribe">
-					<h3>Newsletter</h3>
-				<form action="#" method="post" class="newsletter">
-					<input class="email" type="email" placeholder="Your email..." required="">
-					<input type="submit" class="submit" value="">
-				</form>
-			</section>
+			
 			<h4>Follow us</h4>
 				<div class="wthree-icon">
 					<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
