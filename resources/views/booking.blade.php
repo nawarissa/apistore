@@ -1,9 +1,4 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
@@ -226,13 +221,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav">
-									<li><a class="active" href="index.html">Home</a></li>
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#services" class="scroll">Services</a></li>
-									<li><a href="#chefs" class="scroll">Chefs</a></li>
-									<li><a href="#gallery" class="scroll">Gallery</a></li>
-									<li><a href="#customer" class="scroll">Customers</a></li>
-									<li><a href="#contact" class="scroll">Contact</a></li>
+									<li><a class="active" href="/">Home</a></li>
+									<li><a href="/#about" class="scroll">About</a></li>
+									<li><a href="/#services" class="scroll">Services</a></li>
+									<li><a href="/#chefs" class="scroll">Chefs</a></li>
+									<li><a href="/#gallery" class="scroll">Gallery</a></li>
+									<li><a href="/#customer" class="scroll">Customers</a></li>
+									<li><a href="/#contact" class="scroll">Contact</a></li>
 								</ul>
 
 					<div class="clearfix"> </div>
@@ -360,7 +355,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<!-- copyright -->
 		<div class="copyright-agile">
-			<p>&copy; 2017 Fresh Food. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>&copy;  2020 OnceUponAtime. All rights reserved | Design by <a href="https://www.facebook.com/areen.ibrahim.35/">OnceUponAtime</a></p>
 		</div>
 		<!-- //copyright -->
 </div>

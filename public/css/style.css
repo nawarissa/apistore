@@ -116,7 +116,7 @@ a:focus, a:hover {
     color: #FFFFFF;
     text-align: center;
 }
-.agileinfo-social-grids ul li a i.fa.fa-facebook, .agileinfo-social-grids ul li a i.fa.fa-twitter, .agileinfo-social-grids ul li a i.fa.fa-rss, .agileinfo-social-grids ul li a i.fa.fa-vk {
+.agileinfo-social-grids ul li a i.fa.fa-facebook, .agileinfo-social-grids ul li a i.fa.fa-twitter, .agileinfo-social-grids ul li a i.fa.fa-whatsapp {
     height: 28px;
     width: 28px;
     border: solid 1px #FFFFFF;
@@ -143,16 +143,12 @@ a:focus, a:hover {
 	background:#55acee;
 	color: #FFFFFF;
 }
-.agileinfo-social-grids ul li a i.fa.fa-rss:hover{
+.agileinfo-social-grids ul li a i.fa.fa-whatsapp:hover{
 	border: solid 1px #f26522;
 	background:#f26522;
 	color: #FFFFFF;
 }
-.agileinfo-social-grids ul li a i.fa.fa-vk:hover{
-	border: solid 1px #45668e;
-	background:#45668e;
-	color: #FFFFFF;
-}
+
 /*-- //header-left --*/
 /*-- top-nav --*/
 .top-nav{

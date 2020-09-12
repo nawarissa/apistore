@@ -1,18 +1,12 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
 <head>
-<title>Fresh Food a Hotel Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+<title>OnceUponAtime</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<meta name="keywords" content="Fresh Food a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
 
 <!-- Default-JavaScript-File -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -73,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="header-left">
 						<div class="w3layouts-logo grid__item">
 							<h1>
-								<a class="link link--ilin" href="#"><span>Fresh</span><span>Food</span></a>
+								<a class="link link--ilin" href="#"><span>OnceUp</span><span>onAtime</span></a>
 							</h1>
 						</div>
 					</div>
@@ -90,7 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav">
-									<li><a class="active" href="index.html">Home</a></li>
+									<li><a class="active" href="/">Home</a></li>
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#services" class="scroll">Services</a></li>
 									<li><a href="#chefs" class="scroll">Chefs</a></li>
@@ -106,8 +100,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-								<li><a href="#"><i class="fa fa-vk"></i></a></li>
+								<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+			
+								
 							</ul>
 						</div>
 
@@ -264,7 +259,7 @@ fit: true
 			@include ('main')
 		<!-- copyright -->
 		<div class="copyright-agile">
-			<p>&copy; 2017 Fresh Food. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>&copy; 2020 OnceUponAtime. All rights reserved | Design by <a href="https://www.facebook.com/areen.ibrahim.35/">OnceUponAtime</a></p>
 		</div>
 		<!-- //copyright -->
 </div>
