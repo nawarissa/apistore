@@ -226,13 +226,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav">
-									<li><a class="active" href="index.html">Home</a></li>
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#services" class="scroll">Services</a></li>
-									<li><a href="#chefs" class="scroll">Chefs</a></li>
-									<li><a href="#gallery" class="scroll">Gallery</a></li>
-									<li><a href="#customer" class="scroll">Customers</a></li>
-									<li><a href="#contact" class="scroll">Contact</a></li>
+									<li><a class="active" href="/">Home</a></li>
+									<li><a href="/#about" class="scroll">About</a></li>
+									<li><a href="/#services" class="scroll">Services</a></li>
+									<li><a href="/#chefs" class="scroll">Chefs</a></li>
+									<li><a href="/#gallery" class="scroll">Gallery</a></li>
+									<li><a href="/#customer" class="scroll">Customers</a></li>
+									<li><a href="/#contact" class="scroll">Contact</a></li>
 								</ul>
 
 					<div class="clearfix"> </div>
