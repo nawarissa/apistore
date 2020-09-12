@@ -10,6 +10,10 @@ function needs_login(handler) {
   }
 }
 
+function login() {
+  $("#login_modal").show();
+}
+
 var vm = "";
 
 Vue.component('rest-table', {
@@ -35,6 +39,13 @@ $(document).ready(function() {
       }
     }
   });
+  var token = localStorage.getItem("token");
+  if (token === 'undefined' || token === null) {
+    vm.login = false;
+  }
+  else {
+    vm.login = true;
+  }
   if (window.location.pathname == "/booking") {
     go_booking_page();
   }
