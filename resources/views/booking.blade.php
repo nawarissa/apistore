@@ -1,9 +1,4 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
@@ -360,7 +355,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<!-- copyright -->
 		<div class="copyright-agile">
-			<p>&copy; 2017 Fresh Food. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>&copy;  2020 OnceUponAtime. All rights reserved | Design by <a href="https://www.facebook.com/areen.ibrahim.35/">OnceUponAtime</a></p>
 		</div>
 		<!-- //copyright -->
 </div>
