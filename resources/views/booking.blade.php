@@ -234,7 +234,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</nav>
 						<div class="agileinfo-social-grids">
-							<button v-if="login==false" class="btn btn-primary" type="button" name="button" onclick="login()">Login</button>
+							<button v-if="login==false" class="btn btn-primary" type="button" name="button" onclick="login()">Register</button>
 							<div v-if="login==true">
 								<button class="btn btn-primary" type="button" name="button" onclick="logout()">Logout</button>
 							</div>

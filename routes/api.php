@@ -15,9 +15,6 @@ use App\Booking;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 Route::post('login', 'API\UserController@login')->name('api-login');
 Route::post('register', 'API\UserController@register')->name('api-register');
@@ -27,8 +24,5 @@ Route::get("tables", 'API\BookingController@tables')->name('api_tables');
 Route::post("logout", 'API\UserController@logout')->name("api-logout");
 
 Route::group(['middleware' => 'auth:api'], function() {
-  Route::get('booking', function(Request $request) {
-    return response()->json(["data" => Booking::all()]);
-  });
   Route::post('booking', 'API\BookingController@book')->name("api-book");
 });

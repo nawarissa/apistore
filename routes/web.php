@@ -17,9 +17,9 @@ Route::get('/', "IndexController@index")->name("index");
 Route::get('/booking', "IndexController@book")->name("book");
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+    Route::group(['prefix' => 'admin'], function () {
+        Voyager::routes();
+    });
 
 Route::get('/login', 'UserController@login')->name("login");
 Route::get('/register', 'UserController@register')->name("register");

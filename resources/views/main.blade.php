@@ -475,27 +475,13 @@
 	</div>
 <!-- //contact form -->
 
-<!-- map -->
-<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56801282.36779669!2d-131.48418691999598!3d29.66539724812115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6dc13a009bba0319!2sPret+A+Manger!5e0!3m2!1sen!2sin!4v1491030489371"></iframe>
-		<div class="agile_map_grid">
-			<div class="agile_map_grid1">
-				<h3>Contact Info</h3>
-				<ul>
-					<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>address :</span> 507 Boylston St,Boston USA.</li>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i><span>email :</span> <a href="mailto:info@example.com">info@example.com</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i><span>call us :</span> (+020) 142 3246 918</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-<!-- //map -->
+
 <!-- footer -->
 <div class="footer">
 		<div class="col-md-6 footer-left">
-			<h3>Fresh Food</h3>
-			<p>Morbi eget mollis erat, sit amet feugiat nulla. In hac habitasse platea dictumst. Sed ac fermentum eros.Pellentesque tincidunt nisi sit amet dui lobortis.Pulvinar pellentesque dui tempor</p>
-			<p>Sed iaculis, nisl a eleifend porttitor, diam mauris gravida arcu, suscipit ullamcorper nulla diam vitae lorem..</p>
+			<h3>Once upon a time</h3>
+			<p>A place that brings together the past, its heritage and its details with the present and keeps pace with development</p>
+			<p>Delicious food in a fantastic atmosphere, with distinctive customer service..</p>
 		</div>
 		<div class="col-md-6 footer-right">
 			

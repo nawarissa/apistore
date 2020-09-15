@@ -65,11 +65,11 @@
 			<div class="header">
 				<div class="container-fluid">
 					<div class="header-left">
-						<div class="w3layouts-logo grid__item">
+						
 							<h1>
 								<a class="link link--ilin" href="#"><span>OnceUp</span><span>onAtime</span></a>
 							</h1>
-						</div>
+						
 					</div>
 					<div class="top-nav">
 						<nav class="navbar navbar-default">
@@ -242,20 +242,7 @@ fit: true
 <script src="/js/login.js"></script>
 
 <div id="app">
-	<div class="modal" tabindex="-1" role="dialog" id="login_modal">
-      <div class="wrapper fadeInDown">
-        <div id="formContent">
-
-          <!-- Login Form -->
-          <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" value="">
-            <input type="submit" class="fadeIn fourth" value="Log In" onclick="login_action(event)">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </form>
-        </div>
-      </div>
-    </div>
+	
 			@include ('main')
 		<!-- copyright -->
 		<div class="copyright-agile">

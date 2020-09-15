@@ -531,6 +531,7 @@ a:focus, a:hover {
     margin-bottom: 12px;
 }
 /*-- subscribe --*/
+
 /*-- newsletter --*/
 .subscribe h3,.footer-right h4 {
     font-size: 20px;
@@ -947,7 +948,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 
 
-/*-- services --*/
+/*******--------------------------- services *******-----------------------------*/
 .ser-img {
 	float:left;
 	width:39.33%;
@@ -1140,10 +1141,14 @@ h3.title.ab2 {
     padding: 10px;
     border-radius: 50%;
 }
-/*-- //services --*/
+/*******--------------------------- //// services *******-----------------------------*/
 /*-- //tabs --*/
 
-/*-- gallery --*/
+
+
+
+
+/*******--------------------------- gallery *******-----------------------------*/
 .w3layouts_gallery_grid {
     padding: 0;
 }
@@ -1218,9 +1223,13 @@ h3.title.ab2 {
     text-transform: uppercase;
 }
 
-/*-- //gallery --*/
+/*******--------------------------- //// gallery ******-----------------------------*/
 
-/*-- customer --*/
+
+
+
+
+/*******--------------------------- customer ******-----------------------------*/
 .customer{
 	background: url(../images/p12.jpg) no-repeat 0px -180px;
 	background-size: cover;
@@ -1278,7 +1287,12 @@ h3.title.ab2 {
 	left:32%;
 	border:2px solid #fff;
 }
-/*--flexisel--*/
+/*******--------------------------- //// customer ******-----------------------------*/
+
+
+
+
+/******--------------------------- flexisel ******----------------------------*/
 .flex-slider{	
 background:#222227;
 padding: 70px 0 165px 0;
@@ -1337,146 +1351,12 @@ top: 15% !important;
 right: -4%;
 top: 15% !important;
 }
-/*--//flexisel--*/
-/*-- //customer --*/
-#typed {
-    font-size: 60px;
-    color: #fff;
-    text-transform: capitalize;
-    line-height: 1.5em;
-}
-/* pop up for sign in and sign up form */
-#small-dialog1 h3{
-    color: #000;
-    font-size: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-#small-dialog1 input[type="text"], #small-dialog1 input[type="password"], #small-dialog1 input[type="text"], #small-dialog1 input[type="password"] {
-    padding: 12px;
-    font-size: 14px;
-    border: 2px solid #fc636b;
-    background: transparent;
-    outline: none;
-    width: 100%;
-    margin-bottom: 20px;
-}
-div#small-dialog1,div#small-dialog2 {
-    padding: 50px;
-}
-form ul {
-    float: left;
-    list-style-type: none;
-}
-form a {
-    color: #000;
-    float: right;
-    font-size: 13px;
-}
-#small-dialog1 input[type="submit"], #small-dialog1 input[type="submit"] {
-    background: #fc636b;
-    border: none;
-    padding: 10px 15px;
-    color: #fff;
-    font-size: 14px;
-    outline: none;
-    margin-top: 30px;
-    width: 100%;
-}
-.modal-content{
-    border-radius: 0px;
-}
-.modal-dialog {
-    width: 600px;
-    margin: 30px auto;
-}
-ul li input[type="checkbox"]+label {
-    position: relative;
-    padding-left: 25px;
-    border: #F0F8FF;
-    color: #000;
-    display: inline-block;
-    font-size: 13px;
-}
-ul li input[type="checkbox"]+label span:first-child {
-    width: 17px;
-    height: 15px;
-    display: inline-block;
-    border: 1px solid #000;
-    position: absolute;
-    top: 1px;
-    left: 4px;
-    bottom: 4px;
-}
-input[type="radio"], input[type="checkbox"] {
-    display: none;
-}
-ul li input[type="checkbox"]:checked+label span:first-child:before {
-    content: "";
-    background: url(../images/tick.png)no-repeat;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    font-size: 10px;
-    width: 10px;
-    height: 10px;
-}
-#small-dialog2 h3 {
-    color: #000;
-    font-size: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-#small-dialog2 input[type="tel"],#small-dialog2 input[type="email"], #small-dialog2 input[type="text"], #small-dialog2 input[type="password"],#small-dialog2 select,#small-dialog2 textarea {
-    padding: 12px;
-    font-size: 14px;
-    border: 1px solid #0079c1;
-    background: transparent;
-    outline: none;
-    width: 100%;
-    margin-bottom: 20px;
-    color: #999;
-}
-textarea{
-	min-height:150px;
-}
-#small-dialog2 input[type="tel"] {
-    width: 49%;
-    float: left;
-    margin-right: 1%;
-}
-#small-dialog2 input[type="email"] {
-    width: 49%;
-    float: left;
-    margin-left: 1%;
-}
- #small-dialog2 input[type="submit"] {
-    background: #E91E63;
-    border: none;
-    padding: 10px 15px;
-    color: #fff;
-    font-size: 15px;
-    outline: none;
-    letter-spacing: 2px;
-}
-/* //pop up for sign in and sign up form */
-
-.customer-grid p:after {
-    content: '';
-    position: absolute;
-    left: 41%;
-    transform: rotate(90deg);
-    top: 82%;
-    margin-top: 42px;
-    border-left: 0;
-    border-bottom: 0px solid transparent;
-    border-top: 43px solid transparent;
-    border-left: 59px solid rgba(0, 0, 0, 0.54);
-}
+/******---------------------------//// flexisel *******---------------------------*/
 
 
 
-/* our chefs */
+
+/******--------------------------- our chefs *******---------------------------*/
 .chef h3 {
     text-transform: uppercase;
     font-size: 25px;
@@ -1578,9 +1458,11 @@ textarea{
 	color: #bd081c;
 	background: #fff;
 }
-/* //our chefs */
+/******--------------------------- //// our chefs *******---------------------------*/
 
-/*-- to-top --*/
+
+
+/********--------------------------- to-top *******-----------------------------*/
 #toTop {
 	display: none;
 	text-decoration: none;
@@ -1605,7 +1487,10 @@ textarea{
 	-moz-opacity: 0;
 	filter: alpha(opacity=0);
 }
-/*-- //to-top --*/
+/*********---------------------------///// to-top *******-----------------------------**/
+
+
+
 .agileinfo-social-grids {
     float: right;
     position: absolute;

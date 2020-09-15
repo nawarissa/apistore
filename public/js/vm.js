@@ -18,7 +18,7 @@ var vm = "";
 
 Vue.component('rest-table', {
   props: ['name', 'position', 'count', 'imgUrl', "booking_count"],
-  template: '<div class="rest-table"><img class="rest-image" onclick="show_booking_modal(event)" width="230" height="200" :src="imgUrl" :alt="name" /><h2>{{ name }}</h2><p>{{ position }} - {{ count }}</p><p>Number of bookings: {{ booking_count }}</p></div>'
+  template: '<div class="rest-table"><img class="rest-image" onclick="show_booking_modal(event)" width="230" height="200" :src="imgUrl" :alt="name" /><h2 style="padding-left:40px;">{{ name }}</h2><p style="padding-left:40px;">{{ position }} - {{ count }}</p><p style="padding-left:40px;">Number of bookings: {{ booking_count }}</p></div>'
 })
 
 $(document).ready(function() {
