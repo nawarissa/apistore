@@ -43,7 +43,11 @@ class BookingController extends Controller
           $booking = new Booking($input);
           $booking->save();
           $new_booking = new NewBooking($user->name, $booking->arrival, $table->name, $booking->number);
-          Mail::to($user->email)->send($new_booking);
+          try {
+            Mail::to($user->email)->send($new_booking);
+          } catch (\Exception $e) {
+
+          }
           $response["msg"] = "table Booked";
         }
         else {

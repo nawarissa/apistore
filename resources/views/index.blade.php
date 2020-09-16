@@ -36,6 +36,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/toastr.min.css">
 <!-- default css files -->
 
 <!--web font-->
@@ -101,8 +102,8 @@
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-			
-								
+
+
 							</ul>
 						</div>
 
@@ -240,6 +241,8 @@ fit: true
 <script src="/js/lodash.min.js"></script>
 <script src="js/axios.min.js"></script>
 <script src="/js/login.js"></script>
+<script src="js/toastr.min.js"></script>
+<script src="/js/main.js"></script>
 
 <div id="app">
 	

@@ -443,7 +443,7 @@
 	<div class="contact-w3ls" id="contact">
 		<div class="container">
 			<h3>contact form</h3>
-				<form action="#" method="post">
+				<form action="#" method="post" onsubmit="send_message(event)">
 					<div class="col-md-5 col-sm-5 contact-left agileits-w3layouts">
 
 						<div class="form-control">
@@ -484,7 +484,7 @@
 			<p>Delicious food in a fantastic atmosphere, with distinctive customer service..</p>
 		</div>
 		<div class="col-md-6 footer-right">
-			
+
 			<h4>Follow us</h4>
 				<div class="wthree-icon">
 					<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
