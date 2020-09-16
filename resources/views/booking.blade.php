@@ -234,9 +234,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</nav>
 						<div class="agileinfo-social-grids">
-							<button v-if="login==false" class="btn btn-primary" type="button" name="button" onclick="login()">Register</button>
 							<div v-if="login==true">
 								<button class="btn btn-primary" type="button" name="button" onclick="logout()">Logout</button>
+							</div>
+							<div v-if="login==false">
+								<button class="btn btn-primary" type="button" name="button" onclick="$('#register_modal').show()">Register</button>
+								<button class="btn btn-primary" type="button" name="button" onclick="$('#login_modal').show()">Login</button>
 							</div>
 						</div>
 
@@ -268,15 +271,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 v-if="login==true" class="modal-title">Login</h5>
-					<h5 v-if="login==false" class="modal-title">Register</h5>
+					<h5 class="modal-title">Login</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#booking_modal').hide()">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<form>
-						<div v-if="login==false" class="form-group">
+						<div class="form-group">
+							<label required for="login_email">Email</label>
+							<input type="text" id="login_email" class="form-control" name="login" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label required for="login_password">Password</label>
+							<input type="password" id="login_password" class="form-control" name="password" placeholder="Password">
+						</div>
+            <input type="submit" class="btn btn-primary" value="Log In" onclick="login_action(event)">
+          </form>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#login_modal').hide()">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog" id="register_modal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Register</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#booking_modal').hide()">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
 							<label required for="name">Name</label>
 							<input type="text" id="name" class="form-control" name="name" placeholder="Name">
 						</div>
@@ -288,17 +318,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<label required for="password">Password</label>
 							<input type="password" id="password" class="form-control" name="password" placeholder="Password">
 						</div>
-						<div v-if="login==false" class="form-group">
+						<div class="form-group">
 							<label required for="c_password">Confirm Password</label>
 							<input type="password" id="c_password" class="form-control" name="c_password" placeholder="Confirm Password">
 						</div>
-            <input v-if="login==true" type="submit" class="btn btn-primary" value="Log In" onclick="login_action(event)">
-						<input v-if="login==false" type="submit" class="btn btn-primary" value="Log In" onclick="show_login(event)">
-						<input v-if="login==true" type="submit" class="btn btn-primary" value="Register" onclick="show_register(event)">
-						<input v-if="login==false" type="submit" class="btn btn-primary" value="Register" onclick="register_action(event)">
+						<input type="submit" class="btn btn-primary" value="Register" onclick="register_action(event)">
           </form>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#login_modal').hide()">Close</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#register_modal').hide()">Close</button>
 					</div>
 				</div>
 			</div>
