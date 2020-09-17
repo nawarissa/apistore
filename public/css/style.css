@@ -171,7 +171,7 @@ a:focus, a:hover {
 }
 .top-nav ul li{
     display: inline-block;
-    margin: 0 1em;
+    margin: 1em 1em;
     float: none;
 }
 .top-nav ul li:first-child{

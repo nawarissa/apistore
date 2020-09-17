@@ -203,9 +203,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container-fluid">
 					<div class="header-left">
 						<div class="w3layouts-logo grid__item">
-							<h1>
-								<a class="link link--ilin" href="/"><span>Fresh</span><span>Food</span></a>
-							</h1>
+							
+							<img src="images/logo3.png" style="width:380px;">
+							
 						</div>
 					</div>
 					<div class="top-nav">

@@ -66,10 +66,8 @@
 			<div class="header">
 				<div class="container-fluid">
 					<div class="header-left">
-						
-							<h1>
-								<a class="link link--ilin" href="#"><span>OnceUp</span><span>onAtime</span></a>
-							</h1>
+						<img src="images/logo3.png" style="width:380px;">
+				
 						
 					</div>
 					<div class="top-nav">
