@@ -92,10 +92,9 @@ function go_booking_page() {
 
 function login_action(event) {
   event.preventDefault();
-  let login_field = $("#login_email")
-  let password_field = $("#login_password")
-  let login = login_field.val()
-  let password = password_field.val()
+
+  let login = $("#login_email").val();
+  let password = $("#login_password").val();
   axios({
     url: "/api/login",
 
@@ -115,6 +114,12 @@ function login_action(event) {
     token = response.data["success"]["token"];
     localStorage.setItem("token", token);
     vm.login = true;
+    $("#login_modal").hide();
+    toastr.info("You are logged in");
+    if (vm.table != "") {
+      $("#booking_modal").show();
+    }
+    
   }).catch(function(error) {
     //app.error = error.response.data["error"]
     toastr.error("Error logging in")
@@ -156,6 +161,7 @@ function make_booking(event) {
     }).then(function (response) {
       toastr.info("Booking was successful")
       vm.dates = []
+      vm.table = ""
       var tomorrow = new Date();
       tomorrow.setDate(tomorrow.getDate() + 1);
       flatpickr("#arrival", {
@@ -200,4 +206,45 @@ function show_booking_modal(event) {
     vm.dates = []
     $("#booking_modal").show();
   });
+}
+
+function register_action(event) {
+  event.preventDefault();
+  let login_field = $("#login")
+  let name_field = $("#name")
+  let password_field = $("#password")
+  let c_password_field = $("#c_password")
+  let login = login_field.val()
+  let name = name_field.val()
+  let password = password_field.val()
+  let c_password = c_password_field.val()
+  axios({
+    url: "/api/register",
+
+    method: "post",
+
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    data: {
+      name: name,
+      email: login,
+      password: password,
+      c_password: c_password
+    },
+
+    responseType: 'json'
+  }).then(function (response) {
+    token = response.data["success"]["token"];
+    localStorage.setItem("token", token);
+    toastr.info("Register success")
+    $("#register_modal").hide();
+  }).catch(function(error) {
+    toastr.error("Error in register")
+    if (error.response) {
+      toastr.error(error.response.data.errors["email"])
+      toastr.error(error.response.data.errors["c_password"])
+    }
+  })
 }

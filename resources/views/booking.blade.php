@@ -66,8 +66,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 .booking {
   margin: 20px;
   padding: 20px;
+  height: 1000px;
   background: url("/images/bg.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
 .rest-image:hover {
@@ -191,7 +192,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="/js/lodash.min.js"></script>
 	<script src="/js/flatpickr.js"></script>
 	<script src="/js/axios.min.js"></script>
-	<script src="/js/login.js"></script>
 	<script src="js/toastr.min.js"></script>
 	<script src="/js/vm.js"></script>
 <!-- banner -->
