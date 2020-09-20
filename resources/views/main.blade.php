@@ -21,7 +21,7 @@
 										Maecenas at placerat metus. Curabitur arcu purus, eleifend ut massa at, fringilla sagittis quam.
 										Nulla volutpat tellus orci, id laoreet ante pretium id.
 										</p>
-										<a href="#myModal" data-toggle="modal"> Read More About Our Recipes</a>
+										
 									</div>
 									<div class="ser-img1">
 										<img src="images/about.png" alt="" />
@@ -38,6 +38,7 @@
 									<div class="clearfix"></div>
 								</div>
 							</div>
+
 							<!--  section -->
 							<div class="bhoechie-tab-content">
 										<h3 class="title ab">Our Menu</h3>
@@ -152,6 +153,7 @@
 
 
 
+
 <!-- services -->
 <div class="services" id="services">
 		<div class="container">
@@ -201,6 +203,7 @@
 </div>
 <!-- /services -->
 
+
 <!-- our chefs -->
 <div class="ourchefs" id="chefs">
 	<div class="container">
@@ -210,15 +213,16 @@
 		<div class="col-md-3 chef agile_team_grid">
 			<div class="agileits_w3layouts_team_grid">
 				<ul class="agileinfo_social_icons">
-					<li><a href="#" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.facebook.com/chefantoinetl/" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 				</ul>
 				<img src="images/chef1.jpg" alt=" " class="img-responsive">
 			</div>
-			<h3>Jenny beck</h3>
-			<p>Pantry chef</p>
+			<h3>Chef Antoine</h3>
+			<p>Lebanese chef</p>
 		</div>
+
 		<div class="col-md-3 chef agile_team_grid">
 			<div class="agileits_w3layouts_team_grid">
 				<ul class="agileinfo_social_icons">
@@ -228,19 +232,20 @@
 				</ul>
 				<img src="images/chef2.jpg" alt=" " class="img-responsive">
 			</div>
-			<h3>elvis rich</h3>
-			<p>western chef</p>
+			<h3>Burak Özdemir</h3>
+			<p>Turkish chef</p>
 		</div>
+
 		<div class="col-md-3 chef agile_team_grid">
 			<div class="agileits_w3layouts_team_grid">
 				<ul class="agileinfo_social_icons">
-					<li><a href="#" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.facebook.com/ManalAlalem/" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="https://twitter.com/manalalalem" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 				</ul>
 				<img src="images/chef3.jpg" alt=" " class="img-responsive">
 			</div>
-			<h3>steve mark</h3>
+			<h3>Manal ALAlam</h3>
 			<p>Master chef</p>
 		</div>
 		<div class="col-md-3 chef agile_team_grid">

@@ -24,5 +24,6 @@ Route::get("tables", 'API\BookingController@tables')->name('api_tables');
 Route::post("logout", 'API\UserController@logout')->name("api-logout");
 
 Route::group(['middleware' => 'auth:api'], function() {
+  
   Route::post('booking', 'API\BookingController@book')->name("api-book");
 });
